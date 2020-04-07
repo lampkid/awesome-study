@@ -1,0 +1,30 @@
+{
+  "name": "learn-seneca",
+  "version": "1.0.0",
+  "description": "learn seneca",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch src --watch examples"
+  },
+  "keywords": [
+    "seneca",
+    "node"
+  ],
+  "author": "lampkid",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "seneca": "^3.4.1",
+    "seneca-entity": "^2.0.2",
+    "seneca-jsonfile-store": "^1.1.0",
+    "seneca-mongo-store": "^1.1.0",
+    "seneca-web": "^2.1.0",
+    "seneca-web-adapter-express": "^1.0.2",
+    "qs": "~6.5.1",
+    "express": "~4.15.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
