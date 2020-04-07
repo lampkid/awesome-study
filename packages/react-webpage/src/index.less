@@ -1,0 +1,40 @@
+html, body {
+  width: 100%;
+}
+body, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue",Helvetica, "Lato",Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;
+  // TOPIC: 获取一套适合中文和英文的字体
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: left;
+  font-weight: 400;
+  color: #40a9f5;
+  margin: 0;
+  // color: #555; // TOPIC: 设置主题色， themecolor， textcolor，title color等
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+}
+
+a {
+  color: #3fa9f5;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+// TOPIC: normalize里竟然没有box-sizing: border-box;
+@import '~normalize.css/normalize.css';
+
+// TOPIC: 栅格布局，可封装为一套React组件
+// TOPIC: 如何用栅格布局和media查询做响应式布局
+@import './styles/grid.less';
+
+// TOPIC: 清除浮动的原理，clearfix
+// TOPIC: BFC
+@import './styles/clearfix.less';

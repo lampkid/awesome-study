@@ -1,0 +1,36 @@
+.banner {
+  min-height: 300px;
+
+  position: relative;
+
+  > .mask {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.6);
+  }
+
+  > .bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-position: 50% 50%;
+    filter: blur(5px) grayscale(0.1);
+  }
+
+  > .banner-content {
+    padding-top: 70px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

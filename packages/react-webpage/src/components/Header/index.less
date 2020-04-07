@@ -1,0 +1,78 @@
+header.navbar {
+  min-height: 70px;
+  line-height: 70px; // TOPIC： 垂直居中对齐
+  background: #fff;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  display: flex;
+
+  font-size: 15px;
+  font-weight: 400;
+  color: #555;
+  font-family: 'Lato',sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  
+  ul {
+    list-style: none;
+  }
+
+  @media (min-width: 1200px) {
+    > .container { 
+      width: 1000px;
+    }
+  }
+
+  > .container {
+    margin-left: auto;
+    margin-right: auto;
+
+    .navbar-left {
+      float: left;
+
+      .navbar-brand {
+        &-logo {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        img {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        img:hover {
+          transform: rotateZ(360deg);
+          transition: all 1s;
+        }
+        &-title {
+          position: relative;
+          top: 3px;
+          display: inline-block;
+          margin-left: 10px;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .navbar-right {
+      float: right;
+      ul {
+
+        > li {
+          display: inline-block;
+
+          > a {
+            color: #888;
+            margin-right: 35px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
