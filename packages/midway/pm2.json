@@ -1,0 +1,19 @@
+{
+  "apps": [{
+    "name": "midway-server-online",
+    "script": "./bin/www.js",
+    "merge_logs": true,
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "env_production": {
+      "NODE_ENV": "production"
+    },
+    "instances": 2,
+    "exec_mode": "fork",
+    "log_date_format": "YYYY-MM-DD HH:mm:ss",
+    "error": "/data/deploy/midway/online/logs/app-err.log",
+    "output": "/data/deploy/midway/online/logs/app-out.log",
+    "pid_file": "/data/deploy/midway/online/app.pid"
+  }]
+}

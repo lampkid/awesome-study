@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+    <!--忽略电话号码和email识别-->
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <!--当网站添加到主屏幕快速启动方式，将网站添加到主屏幕快速启动方式-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!--隐藏ios上的浏览器地址栏-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!-- UC默认竖屏 ，UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <!-- QQ强制竖屏 QQ强制全屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!-- 供 native 提供分享使用-->
+    <!--<meta name="description" content="" />-->
+    <!--<meta name="shareIcon" content="" />-->
+    <style>
+      body {
+        height: 100vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .body {
+        line-height: 0;
+      }
+      .img {
+        width: 100%;
+        display: block;
+      }
+    </style>
+    <!--<link rel="stylesheet" href="/normalize.css"> -->
+    <script>
+      var reg1080 = /\/[act]+\//;
+// 根据设备尺寸设置html font-size
+(function(d, w) {
+  const doc = d.documentElement
+  function rem() {
+    const width = doc.getBoundingClientRect().width;
+    const base = reg1080.test(window.location.href) ? 10.8 : 3.75;
+    doc.style.fontSize = width / base + 'px';
+  }
+  rem();
+  w.addEventListener('resize', rem);
+})(document, window);
+    </script>
+    <title>
+      <%
+        if(data.title) {
+      %>
+        <%=data.title %>
+      
+      <%
+        } else {
+      %>
+        撕歌skr
+      <%
+       }
+      %>
+    </title>
+  </head>
+  <body>
+    <script>
+      if (window.location.host === 'your host') {
+        !(function(c,b,d,a){c[a]||(c[a]={});c[a].config={pid:"c1j4zhz5jy@b6dff2b236ec91e",appType:"web",imgUrl:"https://arms-retcode.aliyuncs.com/r.png?",useFmp:true,disableHook:true,sendResource:true,enableSPA:true};
+          with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("crossorigin","",src=d)
+        })(window,document,"///bl.js","__bl");
+
+        window.addEventListener('beforeunload', function() {
+          if (performance && performance.timing) {
+            var timing = performance.timing;
+            var domParse = timing.domInteractive - timing.responseEnd;
+            var pageLoad = timing.loadEventStart - timing.domContentLoadedEventEnd;
+            __bl.avg('speed-domParse', domParse);
+            __bl.avg('speed-pageLoad', pageLoad);
+          }
+        });
+      }
+    </script>
+    <div class="body">
+      <% 
+         _.forEach(data.imgs, function(img) {
+      %>
+        <img class="img" alt="skr" src="<%=publicPath %><%=img %>" />
+      <%
+        })
+      %>
+    </div>
+    <script>
+      /*
+       * 红米手机切图白条问题
+       */
+      if (window.navigator.userAgent.indexOf('Android') !== -1 &&  window.devicePixelRatio < 3) {
+        var imgs = document.querySelectorAll('img');
+        var len = imgs.length;
+        for(var i = 0; i < len; i++) {
+          var img = imgs[i]; 
+          img.style['margin-top'] = '-1px';
+        }
+      }
+    </script>
+  </body>
+</html>

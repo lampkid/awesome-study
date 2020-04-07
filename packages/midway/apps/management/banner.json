@@ -1,0 +1,177 @@
+{
+  "errno": 0,
+  "data": {
+    "api": {
+      "online": {
+        "url": "/api/proxy/v1/kconf/homebanner/update-banner",
+        "params": {
+          "state": 1
+        }
+
+      },
+      "offline": {
+        "url": "/api/proxy/v1/kconf/homebanner/update-banner",
+        "params": {
+          "state": 1
+        }
+      },
+      "publish": {
+        "url": "/api/proxy/v1/kconf/homebanner/update-banner",
+        "params": {
+          "state": 3
+        }
+      }
+    },
+    "search": [{
+        "key": "name",
+        "label": "名称"
+      },
+      {
+        "key": "state",
+        "label": "状态",
+        "type": "select",
+        "defaultValue": "1",
+        "provider": "status"
+      }
+    ],
+
+    "table": [{
+        "key": "id",
+        "title": "id"
+      },
+      {
+        "key": "name",
+        "title": "名称"
+      },
+      {
+        "key": "desc",
+        "title": "描述"
+      },
+      {
+        "key": "bannerURL",
+        "title": "banner",
+        "render": "image-list"
+      },
+      {
+        "key": "webImages",
+        "title": "落地页图",
+        "render": "image-list"
+      },
+      {
+        "key": "landingPage",
+        "title": "落地页"
+      },
+      {
+        "key": "state",
+        "title": "状态",
+        "provider": "status"
+      },
+      {
+        "key": "seq",
+        "title": "顺序"
+      },
+      {
+        "key": "op",
+        "title": "操作",
+        "render": "operation",
+        "operations": [{
+            "type": "action",
+            "key": "view",
+            "confirm": false,
+            "title": "查看"
+          },
+          {
+            "type": "action",
+            "key": "edit",
+            "confirm": false,
+            "title": "编辑"
+          },
+          {
+            "type": "action",
+            "key": "copy",
+            "confirm": false,
+            "title": "复制"
+          },
+          {
+            "type": "action",
+            "key": "publish",
+            "title": "发布"
+          },
+          {
+            "type": "action",
+            "key": "offline",
+            "title": "下线"
+          },
+          {
+            "type": "action",
+            "key": "online",
+            "title": "上线"
+          }
+        ]
+      }
+    ],
+    "options": {
+      "status": {
+        "0": "不合法",
+        "1": "已上线",
+        "2": "已发布",
+        "3": "已下线",
+        "4": "待发布"
+      }
+    },
+
+    "searchOp": {
+      "btns": [{
+          "key": "search",
+          "label": "查询",
+          "icon": "search"
+        },
+        {
+          "key": "reset",
+          "label": "重置"
+        },
+        {
+          "key": "create",
+          "label": "新建",
+          "type": "primary"
+        }
+      ]
+    },
+
+    "form": [{
+        "key": "name",
+        "label": "名称",
+        "type": "text",
+        "rules": ["required"]
+      },
+      {
+        "key": "desc",
+        "type": "textarea",
+        "label": "描述"
+      },
+      {
+        "key": "bannerURL",
+        "type": "image",
+        "label": "banner图",
+        "action": "/midway/manage/banner/upload",
+        "rules": ["required"]
+      },
+      {
+        "key": "webImages",
+        "label": "落地页图片",
+        "type": "image-list",
+        "action": "/midway/manage/banner/upload",
+        "rules": [{
+          "type": "array",
+          "required": true,
+          "minLength": 1
+        }]
+      },
+      {
+        "key": "landingPage",
+        "label": "自定义落地页",
+        "type": "text"
+      }
+    ]
+  }
+}
