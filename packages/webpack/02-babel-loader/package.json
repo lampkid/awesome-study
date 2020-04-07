@@ -1,0 +1,22 @@
+{
+  "name": "01-setup",
+  "version": "1.0.0",
+  "description": "webpack loader setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "keywords": [
+    "webpack",
+    "loader"
+  ],
+  "author": "lampkid",
+  "license": "GPL-3.0",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  }
+}
