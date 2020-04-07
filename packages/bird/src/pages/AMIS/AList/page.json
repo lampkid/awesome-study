@@ -1,0 +1,209 @@
+{
+  "api": {
+    "search": {
+      "url": "/api/money/fetch",
+      "method": "post"
+    },
+    "create": {
+      "url": "/api/money/save",
+      "method": "post"
+    },
+    "edit": {
+      "url": "/api/money/save",
+      "method": "post"
+    },
+    "copy": {
+      "url": "/api/money/save",
+      "method": "post"
+    },
+    "get": {
+      "url": "/api/money/get",
+      "method": "get"
+    },
+    "remove": {
+      "url": "/api/money/remove",
+      "method": "POST"
+    }
+  },
+  "search": [{
+    "key": "no",
+    "label": "编号"
+  },
+  {
+    "key": "pre_no",
+    "label": "冠号"
+  }
+  ],
+
+  "table": [{
+    "key": "id",
+    "title": "id"
+  },
+  {
+    "key": "no",
+    "title": "编号"
+  },
+  {
+    "key": "face_value",
+    "title": "面值",
+    "render": "provider",
+    "provider": "face_value"
+  },
+  {
+    "key": "pre_no",
+    "title": "冠号"
+  },
+  {
+    "key": "generation",
+    "title": "人民币第N套",
+    "render": "provider",
+    "provider": "generation"
+  },
+  {
+    "key": "year",
+    "title": "年份"
+  },
+
+  {
+    "key": "material",
+    "title": "材质",
+    "render": "provider",
+    "provider": "material"
+  },
+  {
+    "key": "desc",
+    "title": "备注"
+  },
+  {
+    "key": "op",
+    "title": "操作",
+    "render": "operation",
+    "operations": [{
+      "type": "modal",
+      "key": "view",
+      "confirm": false,
+      "title": "查看"
+    },
+    {
+      "type": "modal",
+      "key": "edit",
+      "confirm": false,
+      "title": "编辑"
+    },
+    {
+      "type": "modal",
+      "key": "copy",
+      "confirm": false,
+      "title": "复制"
+    },
+    {
+      "type": "action",
+      "key": "remove",
+      "title": "删除"
+    }
+    ]
+  }
+  ],
+  "options": {
+    "generation": {
+      "1": "第一套人民币",
+      "2": "第二套人民币",
+      "3": "第三套人民币",
+      "4": "第四套人民币",
+      "5": "第五套人民币"
+    },
+    "material": {
+      "1": "纸币",
+      "2": "硬币"
+    },
+    "currency": {
+      "1": "人民币"
+    },
+    "face_value": {
+      "001": "1分",
+      "002": "2分",
+      "005": "5分",
+      "01": "1角",
+      "02": "2角",
+      "05": "5角",
+      "1": "1元",
+      "2": "2元",
+      "5": "5元",
+      "10": "10元",
+      "20": "20元",
+      "50": "50元",
+      "100": "100元"
+    },
+    "year": {
+      "1980": "1980",
+      "1990": "1990",
+      "1999": "1999"
+    }
+  },
+  "searchOp": {
+    "btns": [{
+      "key": "search",
+      "label": "查询",
+      "icon": "search"
+    },
+    {
+      "key": "reset",
+      "label": "重置"
+    },
+    {
+      "key": "create",
+      "label": "新建",
+      "type": "primary"
+    }
+    ]
+  },
+
+  "formDataWrapKey": "data",
+  "form":   [{
+    "key": "no",
+    "title": "编号",
+    "type": "text",
+    "rules": ["required"]
+  },
+  {
+    "key": "face_value",
+    "title": "面值",
+    "type": "select",
+    "provider": "face_value",
+    "rules": ["required"]
+  },
+  {
+    "key": "pre_no",
+    "title": "冠号",
+    "type": "text",
+    "rules": ["required"]
+  },
+  {
+    "key": "generation",
+    "title": "人民币第N套",
+    "type": "select",
+    "provider": "generation",
+    "rules": ["required"]
+  },
+  {
+    "key": "year",
+    "title": "年份",
+    "type": "select",
+    "provider": "year",
+    "rules": ["required"]
+  },
+
+  {
+    "key": "material",
+    "title": "材质",
+    "type": "select",
+    "provider": "material",
+    "defaultValue": "1"
+  },
+  {
+    "key": "desc",
+    "title": "备注",
+    "type": "textarea",
+    "rules": []
+  }]
+}

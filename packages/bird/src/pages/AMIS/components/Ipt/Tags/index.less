@@ -1,0 +1,77 @@
+@prefix-cls: ~"x_multipleCheckboxGroup";
+
+@disabled-bg-color: #f5f5f5;
+@error: #f5222d;
+@error-box-shadow: 0 1px 2px 0 rgba(245,34,45,.2);
+@box-shadow-color: rgba(0, 0, 0, 0.15);
+@color: #999999;
+@border-hover-color: #86919E;
+
+.@{prefix-cls} {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+
+  &-item {
+    position: relative;
+    margin: 40px 20px 0;
+  }
+
+  &-title {
+    position: absolute;
+    top: -40px;
+    width: 100%;
+    display: block;
+    font-size: 13px;
+    color: @color;
+    line-height: 40px;
+    cursor: default;
+  }
+
+  .ant-checkbox-group {
+    height: 100%;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: 1px solid #C5CED9;
+    border-radius: 4px;
+    transition: all .3s;
+
+    &:hover {
+      border-color: @border-hover-color;
+      box-shadow: 0 1px 2px 0 @box-shadow-color;
+    }
+
+    .ant-checkbox-group-item {
+      display: block;
+      margin: 5px 0;
+
+      span {
+        color: @color;
+      }
+    }
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+
+    .ant-checkbox-group {
+      background-color: @disabled-bg-color;
+    }
+  }
+}
+
+
+.ant-form-item-control.has-error {
+
+  .@{prefix-cls} {
+
+    .ant-checkbox-group {
+      border-color: @error;
+
+      &:hover {
+        border-color: @error;
+        box-shadow: @error-box-shadow;
+      }
+    }
+  }
+}

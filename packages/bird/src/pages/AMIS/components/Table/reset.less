@@ -1,0 +1,205 @@
+.x-table-wrapper {
+  
+  .ant-table-body {
+    table {
+      //border-collapse: collapse;
+      border-collapse:separate;
+      border-spacing:0 2px;
+    }
+  }
+
+  //修改表头文字、背景颜色
+  .ant-table-thead {
+    margin-bottom: 6px;
+  }
+  .ant-table-thead > tr > th {
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #7E7E99;
+    background: #F5F6F7 !important;
+    padding: 2px 0;
+    border: 0;
+    text-align: center;
+    .ant-table-header-column{
+      height: 22px;
+      line-height: 22px;
+    }
+    &:first-child{
+      border-radius:4px 0 0 4px;
+    }
+    &:last-child{
+      border-radius: 0 4px 4px 0 ;
+    }
+  }
+  .ant-table-tbody:before {
+    content: "-";
+    display: block;
+    line-height: 6px;
+    color: transparent;
+  }
+  //修改列表文字、背景颜色
+  .ant-table-tbody > tr > th {
+    color: white;
+    background: #3071b9 !important;
+  }
+
+  //在鼠标悬浮时背景色展示在当前项非当前行
+  .ant-table-tbody > tr > td {
+    border-top: 1px solid #E5ECF3;
+    border-bottom: 1px solid #E5ECF3;
+    padding: 13px 0;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #545466;
+  }
+  .ant-table-tbody > tr > td {
+    border-top: 1px solid #E5ECF3;
+    border-bottom: 1px solid #E5ECF3;
+    padding: 13px 0;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #545466;
+  }
+  .ant-table-tbody > tr>td:first-child{
+    border-left: 1px solid #E5ECF3;
+    border-radius:  4px 0 0 4px;
+
+  }
+  .ant-table-tbody > tr>td:last-child{
+    border-right: 1px solid #E5ECF3;
+    border-radius: 0 4px 4px 0;
+  }
+  //.ant-table-tbody > tr >td:hover{
+  //  background: rgb(255,255,255) !important;
+  //}
+  ////去除鼠标悬浮的背景色
+  //.ant-table-tbody > tr > td {
+  //  background: rgba(255,255,255,0) !important;
+  //}
+  //.ant-table-tbody > tr >td:hover {
+  //  background: rgba(255, 255, 255, 0) !important;
+  //}
+
+  .ant-table-pagination {
+    .ant-pagination-item-link{
+      border-radius: 2px;
+      border-color: #DDDFE8;
+    }
+    .ant-pagination-total-text{
+      font-family: PingFangSC-Regular;
+      font-size: 12px;
+      color: #666666;
+      text-align: center;
+      height: 26px;
+      line-height: 26px;
+      letter-spacing: 1px;
+    }
+    .ant-pagination-prev {
+      position: relative;
+      width: 26px;
+      min-width: 26px;
+      height: 26px;
+      border-radius: 2px;
+      border-color: #DDDFE8;
+      &:hover{
+        color: #7E7E99;
+      }
+      .ant-pagination-item-link {
+        border: 1px solid #DDDFE8;
+        .anticon {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    .ant-pagination-next{
+      position: relative;
+      width: 26px;
+      min-width: 26px;
+      height: 26px;
+      border-radius: 2px;
+      border-color: #DDDFE8;
+      &:hover{
+        color: #7E7E99;
+      }
+      .ant-pagination-item-link {
+        border: 1px solid #DDDFE8;
+        .anticon {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    .ant-pagination-item{
+      width: 26px;
+      min-width: 26px;
+      height: 26px;
+      border-radius: 2px;
+      border-color: #DDDFE8;
+      &:hover{
+        border-color: #7E7E99;
+      }
+      a {
+        font-family: PingFangSC-Regular;
+        color: #666666;
+        line-height: 26px;
+        text-align: center;
+        padding: 0;
+        font-size: 12px;
+      }
+    }
+    .ant-pagination-item-active {
+      border-color: #7E7E99;
+      background-color: #7E7E99;
+
+      a {
+        color: #ffffff;
+        font-family: PingFangSC-Regular;
+        font-size: 12px;
+      }
+    }
+    .ant-pagination-options{
+      height: 26px;
+      .ant-pagination-options-size-changer{
+        margin: 0;
+      }
+      .ant-select{
+        height: 26px;
+        .ant-select-selection{
+          border-color: #DDDFE8;
+          border-radius: 2px;
+          &:hover{
+            border-color: #7E7E99;
+          }
+          height: 26px;
+          //position: relative;
+          .ant-select-selection__rendered{
+            height: 26px;
+            line-height: 26px;
+            font-family: PingFangSC-Regular;
+            font-size: 12px;
+            color: #666666;
+            text-align: center;
+            padding-right: 2px;
+            //.ant-select-arrow{
+            //  position: absolute;
+            //  left: 0;
+            //  top: 0;
+            //}
+          }
+        }
+      }
+    }
+  }
+}
+

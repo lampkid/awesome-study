@@ -1,0 +1,36 @@
+.audit-wrapper {
+    position: relative;
+    .audio-control {
+        position: fixed;
+        top: 50vh;
+        right:0;
+        transform: rotate(180deg);
+        font-size: 40px;
+
+        z-index: 10;
+    }
+    .audio-control.enabled {
+        color:#447DF1;
+        // animation: sound-play ease-in-out 300ms infinite;
+    }
+    .audio-control.disabled {
+        color: #999;
+    }
+
+}
+
+@keyframes sound-play {
+    0% {
+        transform: rotate(180deg);
+    }
+    25% {
+        transform: rotate(170deg);
+    }
+
+    50% {
+        transform: rotate(190deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}

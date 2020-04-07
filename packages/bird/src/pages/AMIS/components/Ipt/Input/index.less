@@ -1,0 +1,61 @@
+@prefix-cls: ~"x-input";
+
+@color: #3f3f3f;
+
+.@{prefix-cls}-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  .@{prefix-cls}-max-length { padding-right: 56px;
+  }
+
+  .limit {
+    display: inline-block;
+    position: absolute;
+    right: 16px;
+    color: @color;
+  }
+  .icon-wrapper {
+    display: inline-block;
+    position: absolute;
+    top: 11px;
+    right: 16px;
+
+    .icon {
+      font-size: 20px;
+      color: #aeaeae;
+    }
+  }
+
+  .textarea {
+    height: 25px;
+    line-height: 25px;
+    background: #fff;
+    bottom: 10px;
+  }
+}
+
+.@{prefix-cls}-wrapper:hover {
+  .icon-wrapper {
+    .icon {
+      color: #86919e;
+    }
+  }
+}
+
+.ant-form-vertical {
+  .@{prefix-cls}-wrapper .limit {
+    top: 10px;
+  }
+}
+.ant-form-vertical{
+  .ant-form-item-control{
+    line-height: 40px !important;
+  }
+  .x-input-wrapper{
+    .limit{
+      top: auto;
+    }
+  }
+}

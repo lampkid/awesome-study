@@ -1,0 +1,57 @@
+// todo 用less语法设置前缀.x-form-item简化以下样式
+// 根据字段的layout设置label和ipt的布局
+// 实现自己的FormItem？
+.x-form {
+  .ant-form-item.x-form-item-horizontal .ant-form-item-control-wrapper {
+    display: inline-block;
+  }
+
+  .ant-form-item.x-form-item-inline .ant-form-item-control-wrapper  {
+    // 提示信息存在时，布局错乱
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .ant-form-item.x-form-item-vertical .ant-form-item-control-wrapper {
+    display: block;
+  }
+
+  .form-group-inline {
+    .ant-form-item {
+      display: inline-block;
+    }
+  }
+
+  .ant-form-item-label > label {
+    color: #7e7e99;
+  }
+
+  .ant-form-explain, .ant-form-extra {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-left: 16px;
+
+    font-size: 13px;
+    color: #8a8888;
+  }
+
+  .has-error .ant-form-explain {
+    margin-left: 0;
+  }
+
+  .form-item-label-tip {
+    margin-left: 3px;
+    .exposed {
+      i {
+        margin-left: 10px;
+      }
+    }
+    .popup {
+      i {
+        margin-right: 3px;
+      }
+    }
+  }
+
+}
